@@ -1,0 +1,13 @@
+applications:
+- name: api-gateway
+  memory: 1G
+  buildpack: java_buildpack
+  path: target/api-gateway-0.0.1-SNAPSHOT.jar
+  routes:
+  - route: api-gateway.dashaun.group
+  health-check-type: http
+  health-check-http-endpoint: /actuator/health
+  timeout: 120
+  env:
+    EUREKA_URL: http://eureka-server.apps.internal:8080/eureka
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 8.0.+ } }'
