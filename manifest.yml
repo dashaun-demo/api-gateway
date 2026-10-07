@@ -10,4 +10,4 @@ applications:
   timeout: 120
   env:
     EUREKA_URL: http://eureka-server.apps.internal:8080/eureka
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 8.0.+ } }'
+    JBP_CONFIG_OPEN_JDK_JRE: '{jre: {version: 17.+}}'
